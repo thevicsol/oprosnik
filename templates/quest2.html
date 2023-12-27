@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+		<form class="container" action="/questions3">
+			<h2>Вопросы</h2>
+			<div class="row">
+		        <p class="col-md-6">Пожалуйста, не раздумывайте долго над вопросами - отмечайте вариант, который первым пришел вам на ум.</p>
+	        </div>
+            {% for question in questions %}
+			    <div class="row">
+				    <p class="col-md-6">{{question.text}}</p>
+					<table class="col-md-8">
+						<tr>
+							<td><input type="radio" name="q{{ question.id }}" value="на" required></td>
+							<td><input type="radio" name="q{{ question.id }}" value="в" required></td>
+						</tr>
+						<tr>
+							<td>на</td>
+							<td>в</td>
+						</tr>
+					</table>
+			    </div>
+            {% endfor %}
+			
+			<h2>Спасибо за уделенное время! Осталось ответить на три небольших заключительных вопроса</h2>
+				<input class="submit" type="submit" name="submit" value="Далее">
+			</div>
+		</form>
+{% endblock %}

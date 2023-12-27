@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ person.name }}{% endblock %}
+
+{% block content %}
+    <table class="table">
+        <tr>
+            <td>Имя</td>
+            <td>{{ person.name }}</td>
+        </tr>
+        <tr>
+            <td>Год рождения</td>
+            <td>{{ person.born }}</td>
+        </tr>
+    </table>
+{% endblock %}

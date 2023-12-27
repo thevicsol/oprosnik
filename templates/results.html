@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="/stats" method = 'GET'>
+	<h4>спасибо, что прошли опрос!</h4>
+	<div class="row">
+        <img src=static/images/prize.png style="height:320px; margin:20px 20px 40px 20px; " >
+		<p class="col-md-6">Вот ваш уникальный подарок - открытка, сгенерированная специально для вас.<br>Если вы хотите посмотреть статистику по общим результатам опроса, можете нажать на кнопку ниже.</p>
+	</div>
+	<p><input type="submit" value="Посмотреть статистику"></p>
+    </fieldset>
+</form>
+{% endblock %}

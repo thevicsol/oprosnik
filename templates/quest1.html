@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+		<form class="container" action="/questions2">
+			<h4>Анкета информанта</h4>
+			<div class="row">
+				<div class="col-md-4">Ваш возраст</div>
+				<div class="col-md-4"><input type="number" min="0" name="age" required></div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">Ваш пол</div>
+				<select name="gender" class="col-md-4" required>
+					<option value="male">м</option>
+					<option value="female">ж</option>
+					<option value="other">другой</option>
+				</select>
+			</div>
+			<div class="row">
+				<div class="col-md-4">Уровень образования</div>
+				<select name="education" class="col-md-4" required>
+					<option value="kindergarten">детский сад</option>
+					<option value="school_9">9 классов школы</option>
+					<option value="school_11">11 классов школы</option>
+					<option value="college">среднее специальное</option>
+					<option value="student">неоконченное высшее</option>
+					<option value="bachelor">бакалавриат/специалитет</option>
+					<option value="master">магистратура</option>
+					<option value="phd">аспирантура</option>
+					<option value="candidate">кандидат наук</option>
+					<option value="doctor">доктор наук</option>
+				</select>
+			</div>
+			<div class="row">
+				<div class="col-md-4">Уровень владения английским (хотя бы по ощущениям)</div>
+				<select name="english" class="col-md-4" required>
+					<option value="no">не владею</option>
+					<option value="a1">A1</option>
+					<option value="a2">A2</option>
+					<option value="b1">B1</option>
+					<option value="b2">B2</option>
+					<option value="c1">C1</option>
+					<option value="c2">C2</option>
+				</select>
+			</div>
+			<div class="row" style="margin-bottom:30px;">
+				<div class="col-md-4">Если Вы владеете еще какими-то языками, перечислите их через запятую и пробел</div>
+				<div class="col-md-4"><input type="text" name="langs"></div>
+			</div>
+			<div class="row">
+				<input class="submit" type="submit" name="submit" value="Перейти к вопросам">
+			</div>
+		</form>
+{% endblock %}

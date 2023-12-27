@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <button data-toggle="collapse" data-target="#demo">Показать статистику</button>
+    <div id="demo" class="collapse">
+        <table>
+            <tr>
+                <td>Средний возраст</td>
+                <td>{{ all_info['age_mean'] }}</td>
+            </tr>
+            <tr>
+                <td>Минимальный возраст</td>
+                <td>{{ all_info['age_min'] }}</td>
+            </tr>
+            <tr>
+                <td>Максимальный возраст</td>
+                <td>{{ all_info['age_max'] }}</td>
+            </tr>
+            <tr>
+                <td>количество людей, пользующихся автобусом, ответивших "на автобусе"</td>
+                <td>{{ on_bus }}</td>
+            </tr>
+            <tr>
+                <td>количество людей, пользующихся автобусом, ответивших "в автобусе"</td>
+                <td>{{ in_bus }}</td>
+            </tr>
+            <tr>
+                <td>количество людей, не пользующихся автобусом, ответивших "на автобусе"</td>
+                <td>{{ on_nobus }}</td>
+            </tr>
+            <tr>
+                <td>количество людей, пользующихся автобусом, ответивших "в автобусе"</td>
+                <td>{{ in_nobus }}</td>
+            </tr>
+        </table>
+	    <div class="row">
+	    	<div class="col-md-4">"На фейсбуке" vs. "В фейсбуке" (Meta признана экстремистской организацией)</div>
+	    </div>
+        <img src=static/images/stats.png style="height:320px; margin:20px 20px 40px 20px; " >
+	</div>
+</body>
+{% endblock %}

@@ -1,0 +1,65 @@
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import ForeignKey, PrimaryKeyConstraint
+from sqlalchemy.orm import relationship
+
+db = SQLAlchemy()
+
+
+class User(db.Model):
+    __tablename__ = 'user'  # имя таблицы
+    id = db.Column(db.Integer, primary_key=True)  # имя колонки = специальный тип (тип данных, первичный ключ)
+    gender = db.Column(db.Text)
+    education = db.Column(db.Text)
+    age = db.Column(db.Integer)
+    english = db.Column(db.Text)
+    langs = db.Column(db.Text)
+    social = db.Column(db.Text)
+    transport = db.Column(db.Text)
+    picid = db.Column(db.Integer)
+
+
+class Answers(db.Model):
+    __tablename__ = 'answers'
+    id = db.Column(db.Integer, primary_key=True)
+    q1 = db.Column(db.Text)
+    q2 = db.Column(db.Text)
+    q3 = db.Column(db.Text)
+    q4 = db.Column(db.Text)
+    q5 = db.Column(db.Text)
+    q6 = db.Column(db.Text)
+    q7 = db.Column(db.Text)
+    q8 = db.Column(db.Text)
+    q9 = db.Column(db.Text)
+    q10 = db.Column(db.Text)
+    q11 = db.Column(db.Text)
+    q12 = db.Column(db.Text)
+    q13 = db.Column(db.Text)
+    q14 = db.Column(db.Text)
+    q15 = db.Column(db.Text)
+    q16 = db.Column(db.Text)
+    q17 = db.Column(db.Text)
+    q18 = db.Column(db.Text)
+    q19 = db.Column(db.Text)
+    q20 = db.Column(db.Text)
+    q21 = db.Column(db.Text)
+    q22 = db.Column(db.Text)
+    q23 = db.Column(db.Text)
+    q24 = db.Column(db.Text)
+    q25 = db.Column(db.Text)
+    q26 = db.Column(db.Text)
+    q27 = db.Column(db.Text)
+    q28 = db.Column(db.Text)
+    q29 = db.Column(db.Text)
+    q30 = db.Column(db.Text)
+    q31 = db.Column(db.Text)
+    q32 = db.Column(db.Text)
+    q33 = db.Column(db.Text)
+    q34 = db.Column(db.Text)
+    q35 = db.Column(db.Text)
+    q36 = db.Column(db.Text)
+    q37 = db.Column(db.Text)
+    q38 = db.Column(db.Text)
+    q39 = db.Column(db.Text)
+    q40 = db.Column(db.Text)
+    q41 = db.Column(db.Text)
+    q42 = db.Column(db.Text)

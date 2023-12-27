@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+		<form class="container" action="/results">
+			<div class="row">
+				<div class="col-md-4">Какими из этих соцсетей вы пользуетесь?</div>
+				<div class="col-md-4">
+                    <input type="checkbox" name="social" value="fb" >Facebook*<br>      
+                    <input type="checkbox" name="social" value="inst">Instagram*<br>      
+                    <input type="checkbox" name="social" value="twitter">Twitter<br>  
+                    <input type="checkbox" name="social" value="vk">ВКонтакте<br>
+                    <input type="checkbox" name="social" value="yt">YouTube<br>  
+                    <input type="checkbox" name="social" value="tumblr">Tumblr<br>
+				    <p class="col-md-6" style="background-color:#f0d7ad;">*Meta признана экстремистской организацией</p>		
+		    	</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">Какими из этих видов транспорта вы регулярно или часто пользуетесь?</div>
+				<div class="col-md-4">
+                    <input type="checkbox" name="transport" value="car">Машина<br>      
+                    <input type="checkbox" name="transport" value="bus">Автобус<br>      
+                    <input type="checkbox" name="transport" value="metro">Метро<br>  
+                    <input type="checkbox" name="transport" value="train">Поезд<br>
+                    <input type="checkbox" name="transport" value="plane">Самолет<br>  
+			    </div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">Подвиньте ползунок как-нибудь, как вам больше нравится</div>
+			     	<div class="col-md-4">
+                        <input type="range" min="1" max="100" value="50" class="slider" name="picid">
+			        </div>
+			</div>
+			<div class="row">
+				<input class="submit" type="submit" name="submit" value="Отправить и получить бонус">
+			</div>
+		</form>
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Анкета владения языками хантов Казыма</title>
+</head>
+<body>
+<form action="/" method = 'GET'>
+    <fieldset>
+    <legend><b>Опрос про распределение языков общения у носителей хантыйского</b></legend>
+    Владеете ли Вы хантыйским как родным?<br>
+    <input type="radio" name="ask" value="yes" checked>Да<br>
+    <input type="radio" name="ask" value="no">Нет<br>
+    На каком языке Вы общаетесь на работе?<br>
+        Например: хантыйский, зырянский, русский<br>
+    <input type="text" name="work" required pattern='[A-Za-zА-Яа-яЁё]+'><br>
+    На каком языке Вы общаетесь дома?<br>
+        Например: хантыйский, зырянский, русский<br>
+    <input type="text" name="home" required pattern='[A-Za-zА-Яа-яЁё]+'><br>
+        Ваше имя?<br>
+        Например: Даша<br>
+    <input type="text" name="name" required pattern='[A-Za-zА-Яа-яЁё]+'><br>
+        Ваша фамилия?<br>
+        Например: Попова<br>
+    <input type="text" name="surname" required pattern='[A-Za-zА-Яа-яЁё]+'><br>
+    <p><input type="submit" value="Отправить"></p>
+    </fieldset>
+</form>
+<p><a href='/'>Инструкция</a></p>
+</body>
+</html>
